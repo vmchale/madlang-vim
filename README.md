@@ -14,4 +14,4 @@ Plugin `vmchale/madlang-vim`
 
 The highlighting should like the following:
 
-![Syntax highlighting screenshot](http://github.com/vmchale/madlang-vim/vim-screenshot.png "Syntax highlighting screenshot")
+![Syntax highlighting screenshot](https://raw.githubusercontent.com/vmchale/madlang-vim/master/vim-screenshot.png "Syntax highlighting screenshot")
