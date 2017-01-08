@@ -5,6 +5,4 @@ let b:did_ftplugin = 1
 
 setlocal commentstring={#\ %s\ #}
 
-set makeprg=madlibs\ --input\ %
-
-set syntax=madlang
+set makeprg=madlang\ --input\ %
