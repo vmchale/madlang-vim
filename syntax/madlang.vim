@@ -16,7 +16,7 @@ syn match madFloat /\<[+-]\=[0-9]\(_\=\d\)*\.\d\+\>/ display
 hi def link madFloat Float
 
 "Function references
-syn match madFuncRef "[a-z]"
+syn match madFuncName "[a-z]"
 syn region madFuncRef start="efine " end=" " contains=madFuncName
 hi def link madFuncRef Define
 
