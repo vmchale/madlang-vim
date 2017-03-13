@@ -1,0 +1,47 @@
+*madlang* madlang environment in vim
+                        ____
+   ____ ___  ____ _____/ / /___ _____  ____ _
+  / __ `__ \/ __ `/ __  / / __ `/ __ \/ __ `/
+ / / / / / / /_/ / /_/ / / /_/ / / / / /_/ /
+/_/ /_/ /_/\__,_/\__,_/_/\__,_/_/ /_/\__, /
+                                    /____/
+
+
+====================================================================
+CONTENTS                                            *MadlangContents*
+
+    1. Usage ......................................... |MadlangUsage|
+    2. Config ....................................... |MadlangConfig|
+    3. License ..................................... |MadlangLicense|
+
+====================================================================
+Section 1: Usage                                      *MadlangUsage*
+
+By default, madlang-vim provides a command and a keybinding, viz.
+
+:Madlang                                                  *:Madlang*
+    Run madlang on current file and output to a scratch buffer, 
+    e.g. >
+        :Madlang
+<
+
+<F5>...Run madlang.......................................|MadlangKb|
+
+=====================================================================
+Section 2: Config                                     *MadlangConfig*
+
+----------------------------------------------------------------------
+                                                 *'g:madlang_options'*
+Values: Any options to pass to madlang interpreter
+Default: ''
+
+This excludes any particular filepaths, in addition to anything in
+your gitignore. Files to exclude should be separated commas but no
+spaces, e.g.  >
+    let g:madlang_options='--debug'
+<
+
+======================================================================
+Section 3: License                                    *MadlangLicense*
+
+This plugin is licensed under the BDS3 license. 

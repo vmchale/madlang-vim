@@ -1,0 +1,5 @@
+doc/madlang.txt
+ftplugin/madlang.vim
+ftdetect/madlang.vim
+README.md
+LICENSE
