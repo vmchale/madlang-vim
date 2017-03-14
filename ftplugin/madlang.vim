@@ -103,6 +103,7 @@ fun! MadlangGet() "{{{
     execute 'resize ' . size
 
     nnoremap <silent> <buffer> q <esc>:close<cr>
+    nnoremap <buffer> <F5> <esc>:close \| :Madlang<cr>
 
 endfunction "}}}
 
