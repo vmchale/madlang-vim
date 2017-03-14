@@ -78,6 +78,7 @@ endfunction "}}}
 " Open a scratch buffer or reuse the previous one
 fun! MadlangGet() "{{{
     let last_buffer = bufnr("%")
+    let last_buffer_file = bufname("%")
 
     if s:MadlangGotoWin() < 0
         new
@@ -90,7 +91,7 @@ fun! MadlangGet() "{{{
 
     call s:ScratchMarkBuffer()
 
-    execute '.!madlang --input ' . bufname("%") . g:madlang_options
+    execute '.!madlang --input ' . last_buffer_file . g:madlang_options
     setl nomodifiable
     
     let size = s:CountVisualLines()
