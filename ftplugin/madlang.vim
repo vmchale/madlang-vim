@@ -90,7 +90,7 @@ fun! MadlangGet() "{{{
 
     call s:ScratchMarkBuffer()
 
-    execute '.!madlang ' . g:madlang_options . ' %'
+    execute '.!madlang --input ' . bufname("%") . g:madlang_options
     setl nomodifiable
     
     let size = s:CountVisualLines()
