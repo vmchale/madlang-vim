@@ -1,5 +1,6 @@
 - [ ] bug with highlighting before done? (not that bad 2bh)
 - [x] .gitignore for vim projects?
-- [ ] vimball
-- [ ] autogen a dir???
+- [x] vimball
+- ~~[ ] autogen a dir???~~
+- [ ] make `:Madlang` command autowrite buffer, not just `<F5>`
 - [x] plugin
