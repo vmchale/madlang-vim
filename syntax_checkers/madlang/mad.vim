@@ -17,7 +17,7 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
     let errorformat =
                 \ '%INo errors found %m,' .
                 \ '%Z,' .
-                \ '%EParseError %m,' . " fix this
+                \ '%EParseError %m,' .
                 \ '%Z' 
 
     return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
