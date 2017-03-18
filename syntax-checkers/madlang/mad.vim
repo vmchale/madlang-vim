@@ -12,12 +12,10 @@ function! SyntaxCheckers_madlang_mri_GetLocList() dict
     " filter out lines starting with ...
     " long lines are truncated and wrapped in ... %p then returns the wrong
     " column offset
-    let errorformat = '%-G%\%.%\%.%\%.%.%#,'
-
-    let errorformat .=
-                \ '%-GNo errors found,' .
-                \ '%E%f:%l: ParseError\, %m,' . " fix this
-                \ '%Z%p^,' .
+    let errorformat =
+                \ '%INo errors found\.'
+                "\ '%-GNo errors found,' .
+                \ '%E: ParseError %m,' . " fix this
                " \ '%W%f:%l: warning: %m,' .
                " \ '%Z%p^,' .
                " \ '%W%f:%l: %m,' .
@@ -27,3 +25,7 @@ function! SyntaxCheckers_madlang_mri_GetLocList() dict
 
     return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat, 'env': env })
 endfunction
+
+call g:SyntasticRegistry.CreateAndRegisterChecker({
+    \ 'filetype': 'madlang',
+    \ 'name': 'mad'})
