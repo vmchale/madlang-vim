@@ -5,7 +5,7 @@ let g:loaded_syntastic_madlang_mad_checker = 1
 
 let g:syntastic_madlang_mad_exec = "~/.local/bin/madlang"
 
-function! SyntaxCheckers_madlang_mri_GetLocList() dict
+function! SyntaxCheckers_madlang_ma_GetLocList() dict
     let makeprg = self.makeprgBuild({
                 \ "exe": self.getExec(),
                 \ "args": "lint",
