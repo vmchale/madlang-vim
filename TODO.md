@@ -1,7 +1,6 @@
-- [ ] <F3> to tweet?
 - [x] indentation
 - [ ] bug with highlighting before done? (not that bad 2bh)
 - [x] .gitignore for vim projects?
 - [x] vimball
-- [ ] integrate linter to syntastic? (like rust does)
+- [x] integrate linter to syntastic? (like rust does)
 - [x] plugin

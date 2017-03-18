@@ -25,7 +25,8 @@ By default, madlang-vim provides a command and a keybinding, viz.
 <
 
 :MadlangCheck                                        *:MadlangCheck*
-    Run linter, checking for syntax errors via syntastic. 
+    Run linter, checking for syntax errors via syntastic. Will only be 
+    defined if syntastic is present.
 
 <F5>...Run madlang.......................................|MadlangKb|
 

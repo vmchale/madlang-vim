@@ -24,7 +24,10 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
     return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
 endfunction
 
+" Commmand to check
 command! MadlangCheck SyntasticCheck | Error
+" lint automatically
+" autocmd BufWritePost *.mad MadlangCheck
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
     \ 'filetype': 'madlang',
