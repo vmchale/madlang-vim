@@ -15,9 +15,9 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
     " long lines are truncated and wrapped in ... %p then returns the wrong
     " column offset
     let errorformat =
-                \ '%INo errors found.' .
+                \ '%INo errors found %m,' .
                 "\ '%-GNo errors found,' .
-                \ '%EParseError %m' . " fix this
+                \ '%EParseError %m,' . " fix this
                " \ '%W%f:%l: warning: %m,' .
                " \ '%Z%p^,' .
                " \ '%W%f:%l: %m,' .
