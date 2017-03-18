@@ -21,7 +21,7 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
                 \ '%Z,' .
                 \ '%EParseError %m,' .
                 \ '%Z,' . 
-                \ "%ESemantic Error %m," .
+                \ '%ESemantic Error %m,' .
                 \ '%Z' 
 
 
