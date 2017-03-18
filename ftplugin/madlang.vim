@@ -96,7 +96,7 @@ fun! MadlangGet() "{{{
 
     call s:ScratchMarkBuffer()
 
-    execute '.!madlang --input ' . last_buffer_file . g:madlang_options
+    execute '.!madlang run ' . last_buffer_file . g:madlang_options
     setl nomodifiable
     
     let size = s:CountVisualLines()
