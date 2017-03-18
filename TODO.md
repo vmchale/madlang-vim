@@ -1,7 +1,9 @@
+- [ ] <F3> to tweet?
 - [ ] indentation
 - [ ] bug with highlighting before done? (not that bad 2bh)
 - [x] .gitignore for vim projects?
 - [x] vimball
 - ~~[ ] autogen a dir???~~
-- [ ] make `:Madlang` command autowrite buffer, not just `<F5>`
+- [ ] make `:Madlang` command autowrite buffer(?) not just `<F5>`
+- [ ] integrate linter to syntastic? (like rust does)
 - [x] plugin
