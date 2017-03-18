@@ -12,7 +12,7 @@ syn region madString oneline start=+"+ end=+"+
 hi def link madString String
 
 "Floats
-syn match madFloat /\<[+]\=[0-9]\(_\=\d\)*\.\d\+\>/ display
+syn match madFloat /\<[+]\=[0-9]\(_\=\d\)*\.\d\+\>/ display " TODO should include tibetan numerals? 
 hi def link madFloat Float
 
 "Function references
