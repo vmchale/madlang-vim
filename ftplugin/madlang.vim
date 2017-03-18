@@ -17,6 +17,11 @@ if !exists("g:madlang_buf_size")
     let g:madlang_buf_size = 13
 endif
 
+" indentation behavior
+set smarttab
+au BufNewFile,BufRead *.mad
+    \ set shiftwidth=4
+
 " Mark a buffer as scratch
 function! s:ScratchMarkBuffer()
     setlocal buftype=nofile
