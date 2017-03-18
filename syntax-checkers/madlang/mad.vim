@@ -3,11 +3,13 @@ if exists('g:loaded_syntastic_madlang_mad_checker')
 endif
 let g:loaded_syntastic_madlang_mad_checker = 1
 
+let g:syntastic_madlang_mad_exec = "~/.local/bin/madlang"
+
 function! SyntaxCheckers_madlang_mri_GetLocList() dict
-    let makeprg = "madlang lint %" 
-                "self.makeprgBuild({
-                " \ 'args': '-w -T1',
-                " \ 'args_after': '-c' })
+    let makeprg = self.makeprgBuild({
+                \ "exe": self.getExec(),
+                \ "args": "lint",
+                \ "fname": shellescape(expand("%",1))})
 
     " filter out lines starting with ...
     " long lines are truncated and wrapped in ... %p then returns the wrong
@@ -21,9 +23,7 @@ function! SyntaxCheckers_madlang_mri_GetLocList() dict
                " \ '%W%f:%l: %m,' .
                " \ '%-C%.%#'
 
-    let env = { 'madlangOPT': '' }
-
-    return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat, 'env': env })
+    return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
 endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
