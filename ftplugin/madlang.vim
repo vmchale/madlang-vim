@@ -10,7 +10,9 @@ set makeprg=madlang\ --input\ %
 if !exists("g:madlang_options")
     let g:madlang_options = ''
 endif
-
+if !exists("g:syntastic_madlang_checkers")
+    let g:syntastic_madlang_checkers = ['mad']
+endif
 let g:madlang_buf_name = 'Madlang'
 
 if !exists("g:madlang_buf_size")
