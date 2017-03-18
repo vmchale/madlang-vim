@@ -3,7 +3,7 @@ if exists('g:loaded_syntastic_madlang_mad_checker')
 endif
 let g:loaded_syntastic_madlang_mad_checker = 1
 
-let g:syntastic_madlang_mad_exec = "~/.local/bin/madlang"
+let g:syntastic_madlang_mad_exec = "madlang"
 
 function! SyntaxCheckers_madlang_mad_GetLocList() dict
     let makeprg = self.makeprgBuild({
@@ -17,7 +17,7 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
     let errorformat =
                 \ '%INo errors found.' .
                 "\ '%-GNo errors found,' .
-                \ '%E: ParseError %m,' . " fix this
+                \ '%EParseError %m' . " fix this
                " \ '%W%f:%l: warning: %m,' .
                " \ '%Z%p^,' .
                " \ '%W%f:%l: %m,' .
