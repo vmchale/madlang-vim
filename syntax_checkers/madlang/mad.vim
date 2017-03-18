@@ -15,8 +15,12 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
     let errorformat =
                 \ '%INo errors found.,' .
                 \ '%Z,' .
+                \ '%E%f:%l%c:,' .
+                \ '%m,' .
+                \ '%m,' .
+                \ '%Z,' .
                 \ '%EParseError %m,' .
-                \ '%Z' 
+                \ '%Z,' . 
                 \ "%ESemantic Error %m," .
                 \ '%Z' 
 
