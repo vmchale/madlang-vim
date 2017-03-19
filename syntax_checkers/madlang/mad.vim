@@ -20,8 +20,9 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
                 \ '%C%m,' .
                 \ '%Z,' .
                 \ '%EParseError %m,' .
-                \ '%Z,' . 
-                \ '%ESemantic Error %m,' .
+                \ '%Z,' .
+                \ '%E  Semantic Error: %m,' .
+                \ '%C%m,' .
                 \ '%Z' 
 
 
