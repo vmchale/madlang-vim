@@ -1,5 +1,7 @@
 doc/madlang.txt
 ftplugin/madlang.vim
 ftdetect/madlang.vim
+syntax/madlang.vim
+syntax_checkers/madlang/mad.vim
 README.md
 LICENSE

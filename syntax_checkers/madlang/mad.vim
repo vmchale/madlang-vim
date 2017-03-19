@@ -16,8 +16,8 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
                 \ '%INo errors found.,' .
                 \ '%Z,' .
                 \ '%E%f:%l:%c:%m,' .
-                \ '%m,' .
-                \ '%m,' .
+                \ '%Z,' .
+                \ '%E%m,' .
                 \ '%Z,' .
                 \ '%EParseError %m,' .
                 \ '%Z,' . 
