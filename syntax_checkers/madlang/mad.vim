@@ -15,7 +15,7 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
     let errorformat =
                 \ '%INo errors found.,' .
                 \ '%Z,' .
-                \ '%E%f:%l:%c:\n,' .
+                \ '%E%f:%l:%c:,' .
                 \ '%C%m,' .
                 \ '%C%m,' .
                 \ '%Z,' .
@@ -24,7 +24,6 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
                 \ '%E  Semantic Error: %m,' .
                 \ '%C%m,' .
                 \ '%Z' 
-
 
     return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
 endfunction
