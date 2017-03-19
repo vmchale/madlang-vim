@@ -1,8 +1,9 @@
-## Overview
+# Overview
 
-This provides vim syntax highlighting for the [Madlibs](http://github.com/vmchale/madlibs) randomized templating language.
+This provides vim syntax highlighting for the [Madlibs](http://github.com/vmchale/madlibs)
+randomized templating language.
 
-### Installation
+## Installation
 
 Using Vundle:
 
@@ -10,7 +11,18 @@ Using Vundle:
 Plugin `vmchale/madlang-vim`
 ```
 
-### Screenshots
+## Configuration
+
+If you want, you can add the following to your .vimrc:
+
+```
+autocmd BufWritePost *.mad MadlangCheck
+```
+
+This will automatically check syntax of madlang files every time you write the
+buffer.
+
+## Screenshots
 
 The highlighting should look like the following:
 
