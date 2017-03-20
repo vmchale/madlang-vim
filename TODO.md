@@ -3,4 +3,5 @@
 - [x] .gitignore for vim projects?
 - [x] vimball
 - [x] integrate linter to syntastic? (like rust does)
+  - [x] show error positions
 - [x] plugin

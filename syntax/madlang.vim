@@ -24,6 +24,11 @@ hi def link madFuncRef Define
 syn region madKeyword oneline start=/:/ end=/\ /
 syn region madKeyword oneline start=/:/ end=/return/
 hi def link madKeyword Label
+" or highlight as an Identifier?
+
+"Variables
+syn region madKeyword oneline start=/$/ end=/[0-9]/
+hi def link madKeyword Identifier
 
 "Comments
 syn match madComment /#.*/ contains=@Spell
