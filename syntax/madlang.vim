@@ -27,8 +27,8 @@ hi def link madKeyword Label
 " or highlight as an Identifier?
 
 "Variables
-syn region madKeyword oneline start=/\$/ end=/\ /
-hi def link madKeyword Identifier
+syn region madKeyword oneline start=/\$/ end=/[0-9]+/
+hi def link madKeyword Special
 
 "Comments
 syn match madComment /#.*/ contains=@Spell
