@@ -5,3 +5,5 @@
 - [x] integrate linter to syntastic? (like rust does)
   - [x] show error positions
 - [x] plugin
+- [x] fix coloration
+- [ ] make color scheme consistent
