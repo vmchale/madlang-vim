@@ -28,7 +28,7 @@ hi def link madKeyword Label
 
 "Variables 
 " TODO figure out the regex
-syn region madKeyword oneline start=/\$/ end=/[0-9]+/
+syn region madKeyword oneline start=/\$/ end=/\ /
 hi def link madKeyword Identifier
 
 "Comments
