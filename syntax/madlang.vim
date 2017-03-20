@@ -29,7 +29,7 @@ hi def link madKeyword Label
 "Variables 
 " TODO figure out the regex
 syn region madKeyword oneline start=/\$/ end=/\ /
-hi def link madKeyword Identifier
+hi def link madKeyword Special
 
 "Comments
 syn match madComment /#.*/ contains=@Spell
