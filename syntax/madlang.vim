@@ -26,6 +26,10 @@ syn region madKeyword oneline start=/:/ end=/return/
 hi def link madKeyword Label
 " or highlight as an Identifier?
 
+"Inclusions
+syn region madInclusion oneline start=/:/ end=/\.mad/
+hi def link madInclusion Underlined
+
 "Variables 
 " TODO figure out the regex
 syn region madVariable oneline start=/\$/ end=/\ /
