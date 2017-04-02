@@ -27,7 +27,7 @@ hi def link madKeyword Label
 " or highlight as an Identifier?
 
 "Inclusions
-syn region madInclusion oneline start=/:/ end=/\.mad/
+syn region madInclusion oneline start=/\ / end=/\.mad/
 hi def link madInclusion Underlined
 
 "Variables 
