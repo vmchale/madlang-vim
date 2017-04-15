@@ -28,7 +28,7 @@ hi def link madKeyword Label
 
 "Modifiers
 syn region madModifier oneline start=+\.+ end=+\ +
-hi def line madModifier Identifier
+hi def link madModifier Identifier
 " TODO fix this/use parens or something
 
 "Inclusions
