@@ -37,7 +37,7 @@ hi def link madInclusion Underlined
 
 "Variables 
 " TODO figure out the regex
-syn region madVariable oneline start=/\$/ end=/\ /
+syn region madVariable oneline start=/\$/ end=/\ \|\n\|\./
 hi def link madVariable Identifier
 
 "Comments
