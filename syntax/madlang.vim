@@ -26,6 +26,11 @@ syn region madKeyword oneline start=/:/ end=/return/
 hi def link madKeyword Label
 " or highlight as an Identifier?
 
+"Modifiers
+syn region madModifier oneline start=/\./ end=/\ /
+hi def line madModifier Identifier
+" TODO fix this/use parens or something
+
 "Inclusions
 syn region madInclusion oneline start=/:/ end=/\.mad/
 hi def link madInclusion Underlined
