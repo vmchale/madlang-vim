@@ -1,0 +1,8 @@
+'g:madlang_options'	madlang.txt	/*'g:madlang_options'*
+:Madlang	madlang.txt	/*:Madlang*
+:MadlangCheck	madlang.txt	/*:MadlangCheck*
+MadlangConfig	madlang.txt	/*MadlangConfig*
+MadlangContents	madlang.txt	/*MadlangContents*
+MadlangLicense	madlang.txt	/*MadlangLicense*
+MadlangUsage	madlang.txt	/*MadlangUsage*
+madlang	madlang.txt	/*madlang*
