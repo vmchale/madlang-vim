@@ -27,8 +27,8 @@ hi def link madKeyword Label
 " or highlight as an Identifier?
 
 "Modifiers
-syn region madModifier oneline start=+\.+ end=+\ +
-hi def link madModifier Identifier
+syn region madModifier oneline start=+\.+ end=+\ \|\n+
+hi def line madModifier Identifier
 " TODO fix this/use parens or something
 
 "Inclusions
