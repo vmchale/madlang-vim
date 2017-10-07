@@ -31,7 +31,7 @@ By default, madlang-vim provides a command and a keybinding, viz.
 <F5>...Run madlang.........................................|MadlangKb|
 
 ======================================================================
-Section 2: Config                                     *MadlangConfig*
+Section 2: Config                                      *MadlangConfig*
 
 ----------------------------------------------------------------------
                                                  *'g:madlang_options'*
@@ -41,6 +41,18 @@ Default: ''
 This passes any additional options to the interpreter, e.g. >
     let g:madlang_options='--explain'
 <
+
+                                        *g:syntastic_madlang_checkers*
+Values: Any syntax checkers for .mad files that syntastic should use.
+Default: 'mad'
+
+To disable all syntax checkers, try >
+    let g:syntastic_madlang_checkers = []
+<
+
+                                                  *g:madlang_buf_size*
+Values: Default buffer size for scratch output buffer.
+Default: 13
 
 ======================================================================
 Section 3: License                                    *MadlangLicense*

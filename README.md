@@ -23,6 +23,16 @@ This will automatically check syntax of madlang files every time you write the
 buffer. You can also set `g:syntastic_madlang_checkers` manually if you do not
 want the default linter to run.
 
+## Help
+
+If you get stuck, typing
+
+```
+:h madlang
+```
+
+will bring up the help for this plugin.
+
 ## Screenshots
 
 The highlighting should look like the following:
