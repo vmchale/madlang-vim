@@ -9,9 +9,9 @@
 =====================================================================
 CONTENTS                                            *MadlangContents*
 
-    1. Usage ......................................... |MadlangUsage|
-    2. Config ....................................... |MadlangConfig|
-    3. License ..................................... |MadlangLicense|
+    1. Usage ......................................... ❘MadlangUsage❘
+    2. Config ....................................... ❘MadlangConfig❘
+    3. License ..................................... ❘MadlangLicense❘
 
 =====================================================================
 Section 1: Usage                                       *MadlangUsage*
@@ -28,7 +28,7 @@ By default, madlang-vim provides a command and a keybinding, viz.
     Run linter, checking for syntax errors via syntastic. Will only be 
     defined if syntastic is present.
 
-<F5>...Run madlang.........................................|MadlangKb|
+<F5>...Run madlang.........................................❘MadlangKb❘
 
 ======================================================================
 Section 2: Config                                      *MadlangConfig*
