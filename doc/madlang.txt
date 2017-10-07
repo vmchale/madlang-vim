@@ -6,31 +6,31 @@
 /_/ /_/ /_/\__,_/\__,_/_/\__,_/_/ /_/\__, /
                                     /____/
 
-====================================================================
+=====================================================================
 CONTENTS                                            *MadlangContents*
 
     1. Usage ......................................... |MadlangUsage|
     2. Config ....................................... |MadlangConfig|
     3. License ..................................... |MadlangLicense|
 
-====================================================================
-Section 1: Usage                                      *MadlangUsage*
+=====================================================================
+Section 1: Usage                                       *MadlangUsage*
 
 By default, madlang-vim provides a command and a keybinding, viz.
 
-:Madlang                                                  *:Madlang*
+:Madlang                                                   *:Madlang*
     Run madlang on current file and output to a scratch buffer, 
     e.g. >
         :Madlang
 <
 
-:MadlangCheck                                        *:MadlangCheck*
+:MadlangCheck                                          *:MadlangCheck*
     Run linter, checking for syntax errors via syntastic. Will only be 
     defined if syntastic is present.
 
-<F5>...Run madlang.......................................|MadlangKb|
+<F5>...Run madlang.........................................|MadlangKb|
 
-=====================================================================
+======================================================================
 Section 2: Config                                     *MadlangConfig*
 
 ----------------------------------------------------------------------
@@ -38,10 +38,8 @@ Section 2: Config                                     *MadlangConfig*
 Values: Any options to pass to madlang interpreter
 Default: ''
 
-This excludes any particular filepaths, in addition to anything in
-your gitignore. Files to exclude should be separated commas but no
-spaces, e.g.  >
-    let g:madlang_options='--debug'
+This passes any additional options to the interpreter, e.g. >
+    let g:madlang_options='--explain'
 <
 
 ======================================================================
