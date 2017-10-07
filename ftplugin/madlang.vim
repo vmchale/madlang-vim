@@ -27,7 +27,6 @@ au BufNewFile,BufRead *.mad
 " Mark a buffer as scratch
 function! s:ScratchMarkBuffer()
     setlocal buftype=nofile
-    " make sure buffer is deleted when view is closed
     setlocal bufhidden=wipe
     setlocal noswapfile
     setlocal buflisted

@@ -20,7 +20,8 @@ autocmd BufWritePost *.mad MadlangCheck
 ```
 
 This will automatically check syntax of madlang files every time you write the
-buffer.
+buffer. You can also set `g:syntastic_madlang_checkers` manually if you do not
+want the default linter to run.
 
 ## Screenshots
 
