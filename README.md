@@ -1,14 +1,14 @@
 # Overview
 
-This provides vim syntax highlighting for the [Madlibs](http://github.com/vmchale/madlibs)
-randomized templating language.
+This provides vim syntax highlighting for the [Madlang](https://hub.darcs.net/vmchale/madlang)
+text generation language.
 
 ## Installation
 
-Using Vundle:
+Using [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```
-Plugin `vmchale/madlang-vim`
+Plug 'vmchale/madlang-vim'
 ```
 
 ## Configuration
