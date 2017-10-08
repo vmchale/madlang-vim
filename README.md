@@ -7,8 +7,14 @@ text generation language.
 
 Using [vim-plug](https://github.com/junegunn/vim-plug):
 
-```
+```vim
 Plug 'vmchale/madlang-vim'
+```
+
+You can also install with the `madlang` executable:
+
+```bash
+ $ madlang vim
 ```
 
 ## Configuration
