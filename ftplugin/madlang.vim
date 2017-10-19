@@ -118,11 +118,5 @@ fun! MadlangGet() "{{{
 
 endfunction "}}}
 
-augroup madlang
-    autocmd BufWritePre *.mad execute 'lcd %:p:h'
-    autocmd BufWritePost *.mad MadlangCheck
-    command! MadlangCheck SyntasticCheck | Error
-augroup END
-
 command! Madlang call MadlangGet()
 nnoremap <F5> <ESC>:Madlang<CR>
