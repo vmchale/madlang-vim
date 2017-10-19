@@ -118,12 +118,8 @@ fun! MadlangGet() "{{{
 
 endfunction "}}}
 
-fun! SetPath()
-    execute 'lcd %:p:h'
-endfunction
-
 augroup madlang
-    autocmd BufWritePre *.mad call SetPath()
+    autocmd BufWritePre *.mad execute 'lcd %:p:h'
 augroup END
 
 command! Madlang call MadlangGet()
