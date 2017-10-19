@@ -3,12 +3,12 @@
 " URL:        https://github.com/vmchale/madlang-vim
 " LICENSE:    BSD3
 
-if exists("b:current_syntax")
+if exists('b:current_syntax')
   finish
 endif
 
 " Special symbols
-syn match madBullet '\|'
+syn match madBullet '\v\|'
 hi def link madBullet Special
 
 " Literal strings
@@ -49,4 +49,4 @@ syn match madComment /#.*/ contains=@Spell
 syn region madComment start=/{#/ end=/#}/
 hi def link madComment Comment
 
-let b:current_syntax = "madlang"
+let b:current_syntax = 'madlang'
