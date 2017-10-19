@@ -7,6 +7,10 @@ if exists("b:current_syntax")
   finish
 endif
 
+" Special symbols
+syn match madBullet '|'
+hi def link madBullet Special
+
 " Literal strings
 syn region madString oneline start=+"+ end=+"+
 hi def link madString String
