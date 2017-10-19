@@ -118,8 +118,13 @@ fun! MadlangGet() "{{{
 
 endfunction "}}}
 
-" set current directory appropriately
-execute 'lcd %:p:h'
+fun! SetPath()
+    execute 'lcd %:p:h'
+endfunction
+
+augroup madlang
+    autocmd BufWritePre *.mad call SetPath()
+augroup END
 
 command! Madlang call MadlangGet()
 nnoremap <F5> <ESC>:Madlang<CR>
