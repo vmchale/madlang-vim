@@ -8,7 +8,7 @@ if exists('b:current_syntax')
 endif
 
 " Special symbols
-syn match madBullet '\v\|'
+syn keyword madBullet |
 hi def link madBullet Special
 
 " Literal strings
