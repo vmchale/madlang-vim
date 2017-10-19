@@ -7,10 +7,6 @@ if exists('b:current_syntax')
   finish
 endif
 
-" Special symbols
-syn match madBullet '\v\|'
-hi def link madBullet Special
-
 " Literal strings
 syn region madString oneline start=+"+ end=+"+
 hi def link madString String
@@ -20,7 +16,7 @@ syn match madFloat /\<[+]\=[0-9]\(_\=\d\)*\.\d\+\>/ display " TODO should includ
 hi def link madFloat Float
 
 "Function references
-syn match madFuncName "[a-z]"
+syn match madFuncName "[a-z\-]"
 syn region madFuncRef start="efine " end=" " contains=madFuncName
 hi def link madFuncRef Define
 
@@ -48,5 +44,9 @@ hi def link madVariable Identifier
 syn match madComment /#.*/ contains=@Spell
 syn region madComment start=/{#/ end=/#}/
 hi def link madComment Comment
+
+" Special symbols
+syn match madBullet '\v\|'
+hi def link madBullet Special
 
 let b:current_syntax = 'madlang'
