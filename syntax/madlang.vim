@@ -46,7 +46,7 @@ syn region madComment start=/{#/ end=/#}/
 hi def link madComment Comment
 
 " Special symbols
-syntax match madBullet '|'
-hi def link madBullet Special
+syn match madBullet '|'
+highlight link madBullet Special
 
 let b:current_syntax = 'madlang'
