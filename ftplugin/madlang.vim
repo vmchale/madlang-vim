@@ -119,7 +119,7 @@ fun! MadlangGet() "{{{
 endfunction "}}}
 
 " set current directory appropriately
-lcd %:p:h
+execute 'lcd %:p:h'
 
 command! Madlang call MadlangGet()
 nnoremap <F5> <ESC>:Madlang<CR>
