@@ -1,4 +1,4 @@
-if exists("b:madlang_ftplugin")
+if exists('b:madlang_ftplugin')
 	finish
 endif
 let b:madlang_ftplugin = 1
@@ -7,15 +7,17 @@ setlocal commentstring={#\ %s\ #}
 
 set makeprg=madlang\ --input\ %
 
-if !exists("g:madlang_options")
+if !exists('g:madlang_options')
     let g:madlang_options = ''
 endif
-if !exists("g:syntastic_madlang_checkers")
+
+if !exists('g:syntastic_madlang_checkers')
     let g:syntastic_madlang_checkers = ['mad']
 endif
+
 let g:madlang_buf_name = 'Madlang'
 
-if !exists("g:madlang_buf_size")
+if !exists('g:madlang_buf_size')
     let g:madlang_buf_size = 13
 endif
 
@@ -41,19 +43,19 @@ endfunction
 
 " Return the number of visual lines in the buffer
 fun! s:CountVisualLines()
-    let initcursor = getpos(".")
+    let initcursor = getpos('.')
     call cursor(1,1)
     let i = 0
     let previouspos = [-1,-1,-1,-1]
     " keep moving cursor down one visual line until it stops moving position
-    while previouspos != getpos(".")
+    while previouspos != getpos('.')
         let i += 1
         " store current cursor position BEFORE moving cursor
-        let previouspos = getpos(".")
+        let previouspos = getpos('.')
         normal! gj
     endwhile
     " restore cursor position
-    call setpos(".", initcursor)
+    call setpos('.', initcursor)
     return i
 endfunction
 
@@ -64,7 +66,7 @@ fun! s:MadlangGotoWin() "{{{
     if bufnum >= 0
         let win_num = bufwinnr( bufnum )
         " Will return negative for already deleted window
-        exe win_num . "wincmd w"
+        exe win_num . 'wincmd w'
         return 0
     endif
     return -1
@@ -72,19 +74,19 @@ endfunction "}}}
 
 " Close madlang Buffer
 fun! MadlangClose() "{{{
-    let last_buffer = bufnr("%")
+    let last_buffer = bufnr('%')
     if s:MadlangGotoWin() >= 0
         close
     endif
     let win_num = bufwinnr( last_buffer )
     " Will return negative for already deleted window
-    exe win_num . "wincmd w"
+    exe win_num . 'wincmd w'
 endfunction "}}}
 
 " Open a scratch buffer or reuse the previous one
 fun! MadlangGet() "{{{
-    let last_buffer = bufnr("%")
-    let last_buffer_file = bufname("%")
+    let last_buffer = bufnr('%')
+    let last_buffer_file = bufname('%')
 
     if s:MadlangGotoWin() < 0
         new
@@ -92,7 +94,7 @@ fun! MadlangGet() "{{{
         setl modifiable
     else
         setl modifiable
-        normal ggVGd
+        normal! ggVGd
     endif
 
     call s:ScratchMarkBuffer()
@@ -107,7 +109,7 @@ fun! MadlangGet() "{{{
     endif
 
     execute 'resize ' . size
-    if exists(":AnsiEsc")
+    if exists(':AnsiEsc')
         execute 'AnsiEsc'
     endif
 
@@ -115,6 +117,9 @@ fun! MadlangGet() "{{{
     nnoremap <buffer> <F5> <esc>:close \| :Madlang<cr>
 
 endfunction "}}}
+
+" set current directory appropriately
+lcd %:p:h
 
 command! Madlang call MadlangGet()
 nnoremap <F5> <ESC>:Madlang<CR>

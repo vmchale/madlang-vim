@@ -1,3 +1,4 @@
+- [ ] travis ci
 - [x] indentation
 - [ ] bug with highlighting before done? (not that bad 2bh)
 - [x] .gitignore for vim projects?
