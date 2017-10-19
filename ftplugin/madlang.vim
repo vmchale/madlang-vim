@@ -119,7 +119,7 @@ fun! MadlangGet() "{{{
 endfunction "}}}
 
 " set current directory appropriately
-execute 'lcd %:p:h'
+autocmd BufNewFile,BufWrite,BufReadPost *.mad lcd %:p:h
 
 command! Madlang call MadlangGet()
 nnoremap <F5> <ESC>:Madlang<CR>
