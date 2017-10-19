@@ -120,7 +120,6 @@ endfunction "}}}
 
 " set current directory appropriately
 execute 'lcd %:p:h'
-execute "echom 'this does something'"
 
 command! Madlang call MadlangGet()
 nnoremap <F5> <ESC>:Madlang<CR>
