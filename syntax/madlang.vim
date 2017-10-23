@@ -8,7 +8,7 @@ if exists('b:current_syntax')
 endif
 
 " Literal strings
-syn region madString oneline start=+"+ end=+"+
+syn region madString oneline start=+"+ end=+"+ contains=@Spell
 hi def link madString String
 
 "Floats
