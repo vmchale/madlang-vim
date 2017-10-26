@@ -23,7 +23,6 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
                 \ 'exe': self.getExec(),
                 \ 'args': 'check',
                 \ 'fname': shellescape(expand('%') )})
-    " TODO figure out if this is screwing things up/what is being executed
 
     let errorformat =
                 \ '%INo errors found.,' .
