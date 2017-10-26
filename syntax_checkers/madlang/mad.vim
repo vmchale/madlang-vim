@@ -5,6 +5,19 @@ let g:loaded_syntastic_madlang_mad_checker = 1
 
 let g:syntastic_madlang_mad_exec = 'madlang'
 
+function! StripANSI(errors) abort " {{{2
+   
+    let errlist = copy(a:errors)
+    let out = []
+
+    for e in a:errors
+        call add(out, substitute(e, '\[[0-9;]\+m', '', 'g'))
+    endfor
+
+    return out
+
+endfunction " }}}2
+
 function! SyntaxCheckers_madlang_mad_GetLocList() dict
     let makeprg = self.makeprgBuild({
                 \ 'exe': self.getExec(),
@@ -21,11 +34,14 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
                 \ '%Z,' .
                 \ '%EParseError %m,' .
                 \ '%Z,' .
-                \ '%E  Semantic Error: %m,' .
+                \ '%E  %\eSemantic Error:%\e %m,' .
                 \ '%C%m,' .
                 \ '%Z' 
 
-    return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
+    let loclist = SyntasticMake({ 
+            \ 'makeprg': makeprg,
+            \ 'errorformat': errorformat,
+            \ 'Preprocess': 'StripANSI' })
 endfunction
 
 " Commmand to check
