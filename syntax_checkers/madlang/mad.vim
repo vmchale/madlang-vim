@@ -18,7 +18,6 @@ function! StripANSI(errors) abort " {{{2
 
 endfunction " }}}2
 
-                " \ 'args-after': '--no-color',
 function! SyntaxCheckers_madlang_mad_GetLocList() dict
     let makeprg = self.makeprgBuild({
                 \ 'exe': self.getExec(),
