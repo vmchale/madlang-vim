@@ -35,7 +35,7 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
                 \ '%Z,' .
                 \ '%EParseError %m,' .
                 \ '%Z,' .
-                \ '%E  Semantic Error: %m,' .
+                \ '%E %\e Semantic Error: %\e%m,' .
                 \ '%C%m,' .
                 \ '%Z' 
 
