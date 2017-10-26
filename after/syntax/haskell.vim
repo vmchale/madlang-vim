@@ -19,12 +19,6 @@ else
 endif
 
 HiLink quasiQuote     Boolean
-HiLink txtBlock       String
-HiLink txtInterp      Normal
-HiLink txtInterpDelim Delimiter
-HiLink txtOp          Operator
-HiLink txtString      String
-HiLink txtNum         Number
 
 delcommand HiLink
 
