@@ -31,6 +31,10 @@ syn region madModifier oneline start=+\.\|to_+ end=+\ \|\n+
 hi def link madModifier Identifier
 " TODO fix this/use parens or something
 
+" Library declarations
+syn region madDecl oneline start=/:/ end=/library/
+hi def link madDecl Underlined
+
 "Inclusions
 syn region madInclusion oneline start=/:/ end=/\.mad/
 hi def link madInclusion Underlined
