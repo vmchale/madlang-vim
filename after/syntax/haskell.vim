@@ -12,11 +12,7 @@ unlet b:current_syntax
 
 syn region madBlock   matchgroup=quasiQuote start=/\[\$\?madlang|/       end=/|\]/ contains=@madlang
 
-command! -nargs=+ HiLink hi def link <args>
-
-hi def link quasiQuote Underlined
-
-delcommand HiLink
+hi def link madBlock Underlined
 
 " restore current syntax value
 let b:current_syntax = old_syntax
