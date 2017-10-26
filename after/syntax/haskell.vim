@@ -14,7 +14,7 @@ syn region madBlock   matchgroup=quasiQuote start=/\[\$\?madlang|/       end=/|\
 
 command! -nargs=+ HiLink hi def link <args>
 
-HiLink quasiQuote     Boolean
+HiLink quasiQuote     Underlined
 
 delcommand HiLink
 
