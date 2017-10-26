@@ -22,7 +22,8 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
     let makeprg = self.makeprgBuild({
                 \ 'exe': self.getExec(),
                 \ 'args': 'check',
-                \ 'fname': shellescape(expand('%') )})
+                \ 'fname': shellescape(expand('%'),
+                \ 'args-after': '--no-color', )})
     " TODO figure out if this is screwing things up/what is being executed
 
     let errorformat =
@@ -40,7 +41,8 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
 
     let loclist = SyntasticMake({ 
             \ 'makeprg': makeprg,
-            \ 'errorformat': errorformat})
+            \ 'errorformat': errorformat,
+            \ 'Preprocess': 'StripANSI' })
     return loclist
 
 endfunction
