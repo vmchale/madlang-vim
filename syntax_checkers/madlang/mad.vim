@@ -18,11 +18,11 @@ function! StripANSI(errors) abort " {{{2
 
 endfunction " }}}2
 
+                " \ 'args-after': '--no-color',
 function! SyntaxCheckers_madlang_mad_GetLocList() dict
     let makeprg = self.makeprgBuild({
                 \ 'exe': self.getExec(),
                 \ 'args': 'check',
-                \ 'args-after': '--no-color',
                 \ 'fname': shellescape(expand('%') )})
     " TODO figure out if this is screwing things up/what is being executed
 
