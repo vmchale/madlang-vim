@@ -11,7 +11,7 @@ function! StripANSI(errors) abort " {{{2
     let out = []
 
     for e in a:errors
-        call add(out, substitute(e, '\[[0-9;]\+m', '', 'g'))
+        call add(out, substitute(e, '\e\[[0-9;]\+m', '', 'g'))
     endfor
 
     return out
@@ -35,7 +35,7 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
                 \ '%Z,' .
                 \ '%EParseError %m,' .
                 \ '%Z,' .
-                \ '%E %\e Semantic Error: %\e%m,' .
+                \ '%E  Semantic Error: %m,' .
                 \ '%C%m,' .
                 \ '%Z' 
 
