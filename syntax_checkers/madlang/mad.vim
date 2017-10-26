@@ -40,8 +40,7 @@ function! SyntaxCheckers_madlang_mad_GetLocList() dict
 
     let loclist = SyntasticMake({ 
             \ 'makeprg': makeprg,
-            \ 'errorformat': errorformat,
-            \ 'Preprocess': 'StripANSI' })
+            \ 'errorformat': errorformat})
 endfunction
 
 " Commmand to check
