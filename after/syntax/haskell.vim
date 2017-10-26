@@ -10,13 +10,9 @@ unlet b:current_syntax
 syn include @madlang syntax/madlang.vim
 unlet b:current_syntax
 
-syn region madBlock   matchgroup=quasiQuote start=/\[\$\?madlang|/       end=/|\]/ contains=@hamlet
+syn region madBlock   matchgroup=quasiQuote start=/\[\$\?madlang|/       end=/|\]/ contains=@madlang
 
-if version < 508
-  command! -nargs=+ HiLink hi link <args>
-else
-  command! -nargs=+ HiLink hi def link <args>
-endif
+command! -nargs=+ HiLink hi def link <args>
 
 HiLink quasiQuote     Boolean
 
