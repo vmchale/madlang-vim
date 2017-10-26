@@ -8,7 +8,7 @@ let g:syntastic_madlang_mad_exec = 'madlang'
 function! SyntaxCheckers_madlang_mad_GetLocList() dict
     let makeprg = self.makeprgBuild({
                 \ 'exe': self.getExec(),
-                \ 'args': 'lint',
+                \ 'args': 'check',
                 \ 'fname': shellescape(expand('%'))})
     " TODO figure out if this is screwing things up/what is being executed
 
