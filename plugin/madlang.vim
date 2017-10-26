@@ -1,3 +1,7 @@
+" License: BSD3
+" Author: Vanessa McHale
+" Maintainer: Vanessa McHale <vanessa.mchale@reconfigure.io>
+
 if exists('b:madlang_plugin')
 	finish
 endif
