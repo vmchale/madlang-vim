@@ -10,9 +10,9 @@ unlet b:current_syntax
 syn include @madlang syntax/madlang.vim
 unlet b:current_syntax
 
-syn region madBlock   matchgroup=quasiQuote start=/\[\$\?madlang|/       end=/|\]/ contains=@madlang
+syn region madBlock matchgroup=quasiQuote start=/\[\$\?madlang|/       end=/|\]/ contains=@madlang
 
-hi def link madBlock Underlined
+hi def link quasiQuote Underlined
 
 " restore current syntax value
 let b:current_syntax = old_syntax
