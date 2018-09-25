@@ -109,9 +109,6 @@ fun! MadlangGet() "{{{
     endif
 
     execute 'resize ' . size
-    if exists(':AnsiEsc')
-        execute 'AnsiEsc'
-    endif
 
     nnoremap <silent> <buffer> q <esc>:close<cr>
     nnoremap <buffer> <F5> <esc>:close \| :Madlang<cr>

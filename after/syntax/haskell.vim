@@ -1,8 +1,3 @@
-" Vim syntax file
-" Language: haskell with embedded madlang
-" Author:   Vanessa McHale <vanessa.mchale@reconfigure.io>
-" License:  BSD3
-
 " store and remove current syntax value
 let old_syntax = b:current_syntax
 unlet b:current_syntax
